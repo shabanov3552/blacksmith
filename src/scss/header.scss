@@ -1,0 +1,184 @@
+//====================================================================================================
+.header {
+	padding-top: rem(30);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+
+	@media (max-width:$mobileSmall) {
+		padding-top: rem(15);
+	}
+
+	// .header__container
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: 190px;
+
+		@media (max-width:$tablet) {
+			gap: 50px;
+		}
+
+		@media (max-width:$mobile) {
+			align-items: center;
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		@media (max-width:$mobile) {
+			width: 50px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// .header__contacts
+
+	&__contacts {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: rem(40);
+
+		@media (max-width:$mobile) {
+			display: none;
+		}
+	}
+
+	// .header__icon
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// .header__col
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .header__phone
+
+	&__phone {
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 30px;
+		color: #000000;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	// .header__mail
+
+	&__mail {
+		font-weight: 700;
+		font-size: 17px;
+		line-height: 21px;
+		text-decoration-line: underline;
+		color: #FF5600;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	// .header__button
+
+	&__button {
+		margin-bottom: rem(33);
+		padding: rem(18) rem(40);
+		background: #FF5600;
+		border-radius: 30px;
+		color: #fff;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(0);
+		}
+
+		@media (max-width:$mobileSmall) {
+			font-size: 16px;
+			padding: rem(14) rem(20);
+		}
+	}
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
